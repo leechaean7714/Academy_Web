@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=jsp03_mvc/src&lt;com.mvc.dao{MVCDao.java[MVCDao" modifiers="513" timestamp="1608347027000"/>
+<typeInfo handle="=jsp03_mvc/src&lt;com.mvc.biz{MVCBiz.java[MVCBiz" modifiers="513" timestamp="1608347027032"/>
+<typeInfo handle="=jsp09_mvc/src&lt;com.mvc.biz{MyBiz.java[MyBiz" modifiers="513" timestamp="1579173193754"/>
+<typeInfo handle="=jsp09_mvc/src&lt;com.mvc.dao{MyDao.java[MyDao" modifiers="513" timestamp="1609938030225"/>
+<typeInfo handle="=jsp04_login_prac/src&lt;com.prac.biz{MyBiz.java[MyBiz" modifiers="513" timestamp="1580719764876"/>
+<typeInfo handle="=000Login\(TEST)/src&lt;com.login.biz{loginBiz.java[loginBiz" modifiers="513" timestamp="1585724551120"/>
+<typeInfo handle="=000Login\(TEST)/src&lt;com.login.dao{loginDao.java[loginDao" modifiers="513" timestamp="1585724551081"/>
+<typeInfo handle="=00002_mvc_prac_command/src&lt;com.mvc.biz{MvcBiz.java[MvcBiz" modifiers="513" timestamp="1608360902989"/>
+<typeInfo handle="=00002_mvc_prac_command/src&lt;com.mvc.dao{MvcDao.java[MvcDao" modifiers="513" timestamp="1608360972852"/>
+<typeInfo handle="=00003_login_prac/src&lt;com.log.biz{LogBiz.java[LogBiz" modifiers="513" timestamp="1608542934029"/>
+<typeInfo handle="=00003_login_prac/src&lt;com.log.dao{LogDao.java[LogDao" modifiers="513" timestamp="1608542955456"/>
+</typeInfoHistroy>

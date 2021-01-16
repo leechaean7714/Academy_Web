@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;ojdbc6.jar, taglibs-standard-impl-1.2.5.jar, taglibs-standard-jstlel-1.2.5.jar, taglibs-standard-spec-1.2.5.jar&apos; to &apos;lib&apos;" description="Move 4 resources to &apos;lib&apos;" destination="WebContent/WEB-INF/lib" element1="/jsp09_answerboard/WebContent/WEB-INF/lib/ojdbc6.jar" element2="/jsp09_answerboard/WebContent/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" element3="/jsp09_answerboard/WebContent/WEB-INF/lib/taglibs-standard-jstlel-1.2.5.jar" element4="/jsp09_answerboard/WebContent/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="4" stamp="1579561525982" updateReferences="true"/>
+</session>

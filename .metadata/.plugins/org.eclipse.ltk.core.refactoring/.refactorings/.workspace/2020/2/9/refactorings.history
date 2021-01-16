@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;jsp10_answerboard&apos;" deleteContents="false" description="Delete resource &apos;jsp10_answerboard&apos;" element1="/jsp10_answerboard" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1582872463208"/>
+</session>

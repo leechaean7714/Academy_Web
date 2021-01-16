@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.mapper"><!-- mapperd의 이름:mapper는 여러개를 만들 수 있다. 여러개의 mapper중 
+		어떤 매퍼의 어떤 쿼리 문을 쓸꺼야. -->
+
+	<!-- <resultMap type="myDto" id="myMap">resultMap :데이터베이스 <결과데이터를 객체에 
+			로드>하는 방법을 정의하는 엘리먼트
+			ResultMap은 DB 필드값과 DTO객체의 프라퍼티(변수)명이 다를 때 사용한다.
+
+         <result property="myno" column="myno" />
+		<result property="myname" column="MYNAME" />
+		<result property="mytitle" column="MYTITLE" />
+		<result property="mycontent" column="MYCONTENT" />
+		<result property="mydate" column="MYDATE" />
+	</resultMap> -->
+    <!-- <select id="selectList" resultMap="myMap"> -->
+	<select id="selectList" resultType="myDto">
+		SELECT MYNO, MYNAME, MYTITLE, MYCONTENT, MYDATE FROM MYBOARD ORDER BY MYNO
+		DESC
+	</select>
+
+	<select id="selectOne" parameterType="int" resultType="myDto">
+		SELECT MYNO, MYNAME, MYTITLE, MYCONTENT, MYDATE FROM MYBOARD WHERE MYNO
+		=#{myno}
+	</select>
+
+	<insert id="insert" parameterType="myDto">
+		INSERT INTO MYBOARD
+		VALUES(MYSEQ.NEXTVAL,#{myname},#{mytitle},#{mycontent},SYSDATE)
+	</insert>
+
+	<update id="update" parameterType="myDto">
+		UPDATE MYBOARD SET MYTITLE=#{mytitle}, MYCONTENT=#{mycontent} WHERE MYNO
+		=#{myno}
+	</update>
+
+	<delete id="delete" parameterType="int">
+		DELETE FROM MYBOARD WHERE MYNO=#{myno}
+	</delete>
+
+
+</mapper>

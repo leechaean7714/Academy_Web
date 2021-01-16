@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	function getParameterValues() {
+		//바디에다가 태그를 통해서 내용을 구조화 시킴.
+		var name = "name=" + encodeURIComponent($("#name").val());//encodeURIComponent:URI로 데이터를 전달하기 위해서 문자열을 인코딩
+		var kor = "kor=" + $("#kor").val();
+		var eng = "eng=" + $("#eng").val();
+		var math = "math=" + $("#math").val();
+
+		var query = name + "&" + kor + "&" + eng + "&" + math;
+		console.log("query->", typeof query);
+		return query;
+
+	}
+
+	$(function() {
+		$("#process").click(
+				function() {//process를 클릭할때 안의 함수를 
+					$.ajax({//ajax를 사용(score.cal과 비동기)
+						//score.cal?홍길동&kor=100&eng=60.....url을 요청 
+						url : "score.cal?" + getParameterValues(),//score.cal이라는 요청이 전달되서 응답이 됬다.
+						dataType : "json",//dataType:""전송받는 데이터의 타입// data:"":전송할 데이터//json형태의 문자열을 자동으로 jason 객체로  바뀌어 진다
+						//우리가 리턴받아오는 데이터는 json이다/
+						success : function(msg) {//callback함수//성공 했을때 함수가 실행되는데 , 함수가 실행되면서 msg라는 변수에 우리가 요청해서 응답받을때 전달된 데이터가 들어온다.
+							console.log(msg);
+							$("#result").html(
+									//msg.name에 왜 값이 나오나요??json은 map처럼 되어있다.(key:value)즉 키를 가지로 호출하면 해당 키에 맞는 value값이 호출된다. 
+									decodeURIComponent(msg.name) + "님의 총점은"
+											+ msg.sum + "이고, 평균은" + msg.avg
+											+ "입니다."); //name은 홍길동하고 값이 들어가져있기 때문에 msg라는 name이라는 키를 통해서 홍길동이라는 값이 가지고 와진다.
+						}, //이름에 이채안을 쓰면 name 이라는 키가 이채안을 가리킴.
+
+						error : function() {
+							alert("통신실패");
+						}
+					});
+				});
+	});
+</script>
+</head>
+<body>
+
+	<h1>성적 처리 프로그램</h1>
+
+	이름:
+	<input type="text" id="name">
+	<br> 국어:
+	<input type="text" id="kor">
+	<br> 영어:
+	<input type="text" id="eng">
+	<br> 수학:
+	<input type="text" id="math">
+	<br>
+
+	<input type="button" id="process" value="성적 처리">
+	<br>
+
+	<div id="result"></div>
+
+
+</body>
+</html>

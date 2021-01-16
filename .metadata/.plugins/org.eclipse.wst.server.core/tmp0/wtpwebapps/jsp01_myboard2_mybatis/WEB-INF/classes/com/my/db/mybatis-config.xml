@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- 인스턴스 (객체):클래스(설계도>기능(메소드)과 속성(필드))를 가지고 메모리에  적재할 실제 구현체 -->
+<configuration><!-- 손가락 대보기:오류조심, 순서조심(content model) -->
+<properties resource="com/my/db/db.properties"></properties><!-- 경로일떄 슬래시/이름일땐 .-->
+<!-- properties파일:map형태로 되어있다.(key=value)형태로 되어있다. -->
+	<typeAliases>
+	 	<typeAlias type="com.my.dto.MyDto" alias="myDto"/>
+	</typeAliases>
+	
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED"><!--dataSource:jdbc에서 connection객체와 똑같다.-->
+        <property name="driver" value="${driver}"/><!-- jdbc에서 getconnection의 내용 -->
+        <property name="url" value="${url}"/><!-- ${driver}:어디선가 드라이버라는 이름으로 값이 저장되어 있고  그거 가지고 올꺼야.-->
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  
+  <mappers>
+    <mapper resource="com/my/db/mybatis-mapper.xml"/>
+  </mappers>
+</configuration>

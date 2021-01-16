@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;00002_mvc_prac_command&apos;&#x0D;&#x0A;- Original project: &apos;00002_mvc_prac_command&apos;&#x0D;&#x0A;- Original element: &apos;00002_mvc_prac_command/src/com.mvs.Dao&apos;" description="Delete element" element1="/src&lt;com.mvs.Dao" element2="/src&lt;com.mvs" element3="/src&lt;com" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1608356429064" subPackages="false" version="1.0"/>
+</session>

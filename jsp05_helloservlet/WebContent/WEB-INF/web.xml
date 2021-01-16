@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>jsp05_helloservlet</display-name>
+ 
+ <!-- xml:프로젝트 실행 할떄 해당 웹프로젝트의 설정과 관련된 파일 -->
+<welcome-file-list>
+    <welcome-file>home.html</welcome-file><!-- //인덱스가 있더라도// 프로젝트 들어가면 가장 먼저 맞아줄 파일 -->
+</welcome-file-list>
+  
+  <context-param><!-- 해당 프로젝트 전체에 적용되는 파라미터(변수)-->
+  	<param-name>jdbcurl</param-name>
+  	<param-value>jdbc:oracle:thin:@192.168.235.1:1521:xe</param-value><!-- connect db -->
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>hello</servlet-name>
+  	<servlet-class>com.hello.controller.HelloServlet</servlet-class><!-- 객체생성 -->
+  	<init-param><!-- init:해당 객체가 생성되는 것을 의미 / 만들어진 서블릿 객체 안에서만 사용할 수 있는 변수 -->
+  		<param-name>driver</param-name>
+  		<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup><!-- 서버가 실행될때 가장 먼저 실행 될꺼야.-->
+  </servlet>
+
+<servlet-mapping><!-- 요청들어오면 연결해줄꺼야 -->
+	<servlet-name>hello</servlet-name><!-- 해당요청을 수행할수 있는 servlet(hello)한테 mapping이 됨 -->
+	<url-pattern>/hello.do</url-pattern><!-- //슬래시 없으면 톰캣이 실행이 안된다. -->
+</servlet-mapping><!-- 누구를 호출해주라? -->
+
+
+
+
+</web-app>

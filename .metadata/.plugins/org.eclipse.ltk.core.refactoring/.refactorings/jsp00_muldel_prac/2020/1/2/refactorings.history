@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.prac.dto.PracDto&apos; to &apos;MyDto&apos;&#x0D;&#x0A;- Original project: &apos;jsp02_muldel_prac&apos;&#x0D;&#x0A;- Original element: &apos;com.prac.dto.PracDto&apos;&#x0D;&#x0A;- Renamed element: &apos;com.prac.dto.MyDto&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;PracDto&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.prac.dto{PracDto.java[PracDto" matchStrategy="1" name="MyDto" qualified="false" references="true" similarDeclarations="false" stamp="1578384480600" textual="false" version="1.0"/>
+</session>
